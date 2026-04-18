@@ -21,21 +21,21 @@ import com.example.project.Тронин11.utils.ValidationUtils;
 public class LoginActivity extends AppCompatActivity {
 
     // UI элементы
-    private EditText etEmail;           // Поле для ввода email
-    private EditText etPassword;        // Поле для ввода пароля
-    private Button btnLogin;            // Кнопка "Войти"
-    private TextView tvGoToRegister;    // Ссылка на регистрацию
+    private EditText etEmail;
+    private EditText etPassword;
+    private Button btnLogin;
+    private TextView tvGoToRegister;
 
-    // Зависимости
-    private DatabaseHelper databaseHelper;  // Работа с базой данных
-    private SessionManager sessionManager;   // Сохранение сессии
+
+    private DatabaseHelper databaseHelper;
+    private SessionManager sessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // Инициализация
+
         databaseHelper = DatabaseHelper.getInstance(this);
         sessionManager = SessionManager.getInstance(this);
 

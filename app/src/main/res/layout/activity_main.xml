@@ -7,7 +7,6 @@
     android:gravity="center"
     android:background="#FFFFFF">
 
-    <!-- Приветствие с email пользователя -->
     <TextView
         android:id="@+id/tvWelcome"
         android:layout_width="wrap_content"
@@ -18,7 +17,6 @@
         android:gravity="center"
         android:layout_marginBottom="32dp" />
 
-    <!-- Кнопка выхода -->
     <Button
         android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
@@ -26,5 +24,11 @@
         android:text="Выйти из системы"
         android:paddingLeft="32dp"
         android:paddingRight="32dp" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="com.example.project.Тронин13.favourites.favourites"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

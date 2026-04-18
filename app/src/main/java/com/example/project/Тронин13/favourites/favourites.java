@@ -1,4 +1,4 @@
-package com.example.project.Лапин12.placeholder;
+package com.example.project.Тронин13.favourites;
 
 import android.os.Bundle;
 
@@ -12,22 +12,21 @@ import com.example.project.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link BlankFragment#newInstance} factory method to
+ * Use the {@link favourites#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BlankFragment extends Fragment {
+public class favourites extends Fragment {
 
 
-
-    public BlankFragment() {
-
+    public favourites() {
+        // Required empty public constructor
     }
 
 
-
-    public static BlankFragment newInstance(String param1, String param2) {
-        BlankFragment fragment = new BlankFragment();
+    public static favourites newInstance(String param1, String param2) {
+        favourites fragment = new favourites();
         Bundle args = new Bundle();
+
         fragment.setArguments(args);
         return fragment;
     }
@@ -36,6 +35,7 @@ public class BlankFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
+
         }
     }
 
@@ -43,15 +43,6 @@ public class BlankFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blank, container, false);
+        return inflater.inflate(R.layout.fragment_favourites, container, false);
     }
-}
-
-class Vehicle{
-    int id;
-    String name;
-    String type;
-    int cost;
-    Enum IsFavourite;
-
 }
