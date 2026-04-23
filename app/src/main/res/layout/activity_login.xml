@@ -7,7 +7,7 @@
     android:gravity="center"
     android:background="#FFFFFF">
 
-    <!-- Заголовок -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,7 +17,7 @@
         android:textColor="#000000"
         android:layout_marginBottom="48dp" />
 
-    <!-- Поле ввода Email -->
+
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
         android:background="@drawable/edit_text_background"
         android:layout_marginBottom="16dp" />
 
-    <!-- Поле ввода Пароля -->
+
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
@@ -39,7 +39,7 @@
         android:background="@drawable/edit_text_background"
         android:layout_marginBottom="24dp" />
 
-    <!-- Кнопка Войти -->
+
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
@@ -47,7 +47,7 @@
         android:text="Войти"
         android:textSize="16sp" />
 
-    <!-- Ссылка на регистрацию -->
+
     <TextView
         android:id="@+id/tvGoToRegister"
         android:layout_width="wrap_content"
