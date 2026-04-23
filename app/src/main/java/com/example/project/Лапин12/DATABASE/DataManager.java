@@ -10,7 +10,6 @@ public class DataManager {
     private Context context;
     private List<Item> itemList;
     private SharedPreferences sharedPreferences;
-    private int nextId;
 
     private DataManager(Context context) {
         this.context = context;
@@ -27,17 +26,13 @@ public class DataManager {
     }
 
     private void loadData() {
-        // Загружаем сохраненные данные
         int size = sharedPreferences.getInt("list_size", 0);
-        nextId = sharedPreferences.getInt("next_id", 1);
-
         for (int i = 0; i < size; i++) {
             int id = sharedPreferences.getInt("item_" + i + "_id", 0);
             String title = sharedPreferences.getString("item_" + i + "_title", "");
             String shortText = sharedPreferences.getString("item_" + i + "_shortText", "");
             int price = sharedPreferences.getInt("item_" + i + "_price", 0);
             boolean isFavorite = sharedPreferences.getBoolean("item_" + i + "_favorite", false);
-
             if (id != 0) {
                 itemList.add(new Item(id, title, shortText, price, isFavorite));
             }
@@ -47,8 +42,6 @@ public class DataManager {
     private void saveData() {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt("list_size", itemList.size());
-        editor.putInt("next_id", nextId);
-
         for (int i = 0; i < itemList.size(); i++) {
             Item item = itemList.get(i);
             editor.putInt("item_" + i + "_id", item.getId());
@@ -64,20 +57,8 @@ public class DataManager {
         return new ArrayList<>(itemList);
     }
 
-    public List<Item> getFavoriteItems() {
-        List<Item> favorites = new ArrayList<>();
-        for (Item item : itemList) {
-            if (item.isFavorite()) {
-                favorites.add(item);
-            }
-        }
-        return favorites;
-    }
-
-    public void addItem(String title, String shortText, int price) {
-        Item newItem = new Item(nextId, title, shortText, price, false);
-        itemList.add(newItem);
-        nextId++;
+    public void addItem(Item item) {
+        itemList.add(item);
         saveData();
     }
 
@@ -118,5 +99,15 @@ public class DataManager {
             }
         }
         return null;
+    }
+
+    public int getNextId() {
+        int maxId = 0;
+        for (Item item : itemList) {
+            if (item.getId() > maxId) {
+                maxId = item.getId();
+            }
+        }
+        return maxId + 1;
     }
 }

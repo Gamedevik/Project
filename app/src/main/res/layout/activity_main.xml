@@ -3,33 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
-    android:gravity="center"
     android:background="#FFFFFF">
 
-    <TextView
-        android:id="@+id/tvWelcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Добро пожаловать!"
-        android:textSize="20sp"
-        android:textColor="#000000"
-        android:gravity="center"
-        android:layout_marginBottom="32dp" />
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
     <Button
         android:id="@+id/btnLogout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="56dp"
         android:text="Выйти из системы"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp" />
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
-        android:name="com.example.project.Тронин13.favourites.favourites"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_margin="16dp" />
 
 </LinearLayout>
-

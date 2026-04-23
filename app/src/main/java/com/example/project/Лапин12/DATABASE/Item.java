@@ -17,16 +17,12 @@ public class Item {
 
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
-
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
-
     public String getShortText() { return shortText; }
     public void setShortText(String shortText) { this.shortText = shortText; }
-
     public int getPrice() { return price; }
     public void setPrice(int price) { this.price = price; }
-
     public boolean isFavorite() { return isFavorite; }
     public void setFavorite(boolean favorite) { isFavorite = favorite; }
 }
