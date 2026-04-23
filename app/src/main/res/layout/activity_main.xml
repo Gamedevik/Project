@@ -11,6 +11,30 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/btn_show_main"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:text="Главная"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/btn_show_favorites"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:text="Избранное"
+            android:layout_marginStart="4dp" />
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/btnLogout"
         android:layout_width="match_parent"
